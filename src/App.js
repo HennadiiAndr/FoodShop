@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, Component } from 'react'
+import Navbar from './components/navbar'
+import Warning from './components/warning'
+import Banner from './components/banner'
+import CentralBlock from './components/central-block'
+import OurPartner from './components/our-partner'
+import DownBlock from './components/down-block'
+import TellAFriend from './components/tell-a-friend'
+import Footer from './components/footer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './styles.scss'
+
+class App extends Component {
+   render(){
+      return (
+         <div className='main'>
+            <div className='mainflow'>
+               <Warning/>
+               <Navbar/>
+               <Banner/>
+               <CentralBlock/>
+               <OurPartner/>
+               <DownBlock/>
+               <TellAFriend/>
+               <Footer/>
+            </div>
+         </div> 
+      )
+   }
 }
 
-export default App;
+export default App
